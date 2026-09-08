@@ -16,16 +16,20 @@
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/game"
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "game-udp",
+          "multiMode": true
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      }
     }
   ]
 }
