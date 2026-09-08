@@ -2,10 +2,16 @@
   "log": {
     "loglevel": "warning"
   },
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
   "inbounds": [
     {
-      "port": 8080,
       "listen": "0.0.0.0",
+      "port": 8080,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -18,7 +24,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/"
+          "path": "/game"
         }
       }
     }
@@ -26,7 +32,10 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "tag": "direct"
+      "tag": "direct",
+      "settings": {
+        "domainStrategy": "UseIP"
+      }
     }
   ]
 }
