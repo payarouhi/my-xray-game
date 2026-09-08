@@ -16,9 +16,9 @@
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "grpc",
-        "grpcSettings": {
-          "serviceName": "game-grpc"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/game"
         }
       }
     }
