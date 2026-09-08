@@ -2,12 +2,6 @@
   "log": {
     "loglevel": "warning"
   },
-  "dns": {
-    "servers": [
-      "1.1.1.1",
-      "8.8.8.8"
-    ]
-  },
   "inbounds": [
     {
       "listen": "0.0.0.0",
@@ -24,18 +18,14 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/game"
+          "path": "/"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "tag": "direct",
-      "settings": {
-        "domainStrategy": "UseIP"
-      }
+      "protocol": "freedom"
     }
   ]
 }
